@@ -1,0 +1,27 @@
+.slider {
+	width: 100%;
+	}
+.slick-dots {
+	bottom: -50px;
+	}
+.slick-dots li {
+	width: 25px;
+	height: 25px;
+	margin: 0 5px;
+
+	cursor: pointer;
+	text-align: center;
+
+	color: #22242e;
+	border-radius: 50%;
+	background-color: #fff;
+
+	font-size: 18px;
+	line-height: 25px;
+	}
+li.slick-active {
+	color: #fff;
+	border: 1px solid #75b662;
+	border-radius: 50%;
+	background-color: #75b662;
+	}

@@ -1,11 +1,30 @@
 // reset style
 @import "reset";
 
+// base
+@import "base/base";
+@import "base/fonts";
+@import "base/variables";
+
 // libs
 @import "libs/slick";
+
+// common
+@import "common/common";
+@import "common/slick-slide";
+
+
+// components
+@import "components/article";
+@import "components/burger";
+@import "components/nav-panel";
+@import "components/sidebar";
 
 // layout
 @import "layout/header";
 @import "layout/footer";
 
-// section
+// main-page
+@import "blocks/main-page/news-section";
+@import "blocks/main-page/products-section";
+@import "blocks/main-page/about-section";

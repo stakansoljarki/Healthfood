@@ -1,0 +1,53 @@
+section.about
+  .about__container.container
+    img.about__icons(src="./img/main-page/about/icons.svg", alt="icon")
+    .about__photos
+      img.about__photos-porridge(
+        src="./img/main-page/about/porridge.jpg",
+        alt="porridge"
+      )
+      img.about__photos-fish(src="./img/main-page/about/fish.jpg", alt="fish")
+    .about__description
+      h3.about__description-title О нас
+      p.about__description-subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      button.about__description-button.button Подробнее
+    .about__form-box
+      .about__wrap
+        -
+          let imageList = [
+            {
+              class: 'about__letter',
+              src: './img/main-page/about/letter.svg',
+              alt: 'letter'
+            },
+            {
+              class: 'about__claude-b',
+              src: './img/main-page/about/claude-b.svg',
+              alt: 'claude-b'
+            },
+             {
+              class: 'about__claude-m',
+              src: './img/main-page/about/claude-m.svg',
+              alt: 'claude-m'
+            },
+            {
+              class: 'about__claude-s',
+              src: './img/main-page/about/claude-s.svg',
+              alt: 'claude-s'
+            }
+          ]
+        each imageItem in imageList
+          img(class=imageItem.class, src=imageItem.src, alt=imageItem.alt)
+      .about__wrapper
+        h3.about__title Подписка на новость
+        form.about__form
+          input.about__form-input(
+            type="email",
+            name="email",
+            placeholder="Email"
+          )
+          input.about__form-submit.button(
+            type="submit",
+            name="submit",
+            value="Подписаться"
+          )
