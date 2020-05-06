@@ -5,7 +5,7 @@ footer.footer
         a.footer__logo-link(href="index.html")
           img(src="./img/logo.svg")
         p.footer__item Интернет-издание честных новостей.
-        p.footer__item © Все права защищены. 2019
+        p.footer__item © Все права защищены. 2020
       .footer__menu
         h3.footer__title Меню
         .footer__menu-inner
@@ -17,11 +17,11 @@ footer.footer
                       text: 'О нас'
                   },
                   {
-                      href: 'newss.html',
+                      href: 'news.html',
                       text: 'Новости'
                   },
                   {
-                      href: 'healthy.html-foods',
+                      href: 'healthy-foods.html',
                       text: 'Полезные продукты'
                   },
                   {
@@ -58,9 +58,24 @@ footer.footer
     .footer__wrap
       .footer__info
         h3.footer__title Дополнительная информация
-        p.footer__item Политика конфиденциальности
-        p.footer__item Правила пользования сайтом
-        p.footer__item Реклама
+
+        -
+          let infoList = [
+              {
+                  href: '#',
+                  link: 'Дополнительная информация'
+              },
+              {
+                  href: '#',
+                  link: 'Правила пользования сайтом'
+              },
+              {
+                  href: '#',
+                  link: 'Реклама'
+              }
+          ]
+        each infoItem in infoList
+          a.footer__link(href=infoItem.href)= infoItem.link
       .footer__contacts
         h3.footer__title Контакты
         p.footer__item roman.dybach@gmail.com

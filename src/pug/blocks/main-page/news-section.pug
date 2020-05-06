@@ -8,9 +8,9 @@ section.news
         )
       img.article__vector(src="./img/main-page/main-top.svg", alt="vector")
       p.article__tag Популярные новости
-      .article__text.article__text_padding
+      .article__text.article__text--padding
         a.article__link.article__link--size(href="article.html") Сколько времени нужно питаться здорово, чтобы почувствовать пользу
-        p.article__date 01.07.1996
+        p.article__date 01.05.2020
           a.article__author(href="author.html") Евгений Третяк
     sidebar.news__sidebar
       -
@@ -19,23 +19,23 @@ section.news
                 src: './img/main-page/main-box.jpg',
                 atl: 'baked piece of meat with vegetables',
                 link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
-                date: '01.07.1996',
+                date: '01.05.2020',
                 author: 'Евгений Третяк'
             },
             {
                 src: './img/main-page/main-box.jpg',
                 atl: 'baked piece of meat with vegetables',
                 link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
-                date: '01.07.1996',
+                date: '01.05.2020',
                 author: 'Евгений Третяк'
             },
             {
                 src: './img/main-page/main-box.jpg',
                 atl: 'baked piece of meat with vegetables',
                 link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
-                date: '01.07.1996',
+                date: '01.05.2020',
                 author: 'Евгений Третяк'
             }
         ]
-      each card in articleList
+      each articleItem in articleList
         include ../../components/article

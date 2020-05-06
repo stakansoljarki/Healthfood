@@ -52,7 +52,8 @@
 		}
 
 	&__item,
-	&__nav-item {
+	&__nav-item,
+	&__link {
 		&:not(:last-child) {
 			margin-bottom: 10px;
 			}
@@ -60,12 +61,13 @@
 
 	&__item,
 	&__link {
-		color: white;
+		color: $color-text-submain;
 
 		font-size: 12px;
 		}
 
 	&__link {
+		display: block;
 		&:hover {
 			color: $color-hover-submain;
 			}
@@ -73,6 +75,17 @@
 
 	&__social {
 		display: flex;
+		}
+	}
+.social {
+	&__link {
+		&--footer-hover {
+			&:hover {
+				color: $color-text-main;
+				border: 1px solid $color-hover-submain;
+				background-color: $background-color-submain;
+				}
+			}
 		}
 	}
 

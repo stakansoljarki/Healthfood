@@ -127,21 +127,6 @@
 		}
 	.social {
 		display: none;
-		&__menu {
-			justify-content: center;
-
-			min-height: 75px;
-			&-link {
-				margin: 0 25px;
-
-				color: $color-text-submain;
-				svg {
-					path {
-						fill: $color-text-submain;
-						}
-					}
-				}
-			}
 		}
 	.subheader {
 		&-container {

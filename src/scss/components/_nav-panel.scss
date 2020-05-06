@@ -75,19 +75,21 @@
 	.subheader {
 		display: none;
 
-		background: $background-color-submain;
+		background: linear-gradient(90deg, #8ecb7e -74.27%, #66aa52 100%);
 
 		&__container {
 			display: flex;
 			flex-direction: column;
+
+			text-align: center;
 			}
 
 		&__list {
 			flex-direction: column;
 
-			&__link {
-				border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-				}
+			}
+		&__link {
+			border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 			}
 		}
 	.search {

@@ -15,39 +15,35 @@ section.about
       .about__wrap
         -
           let imageList = [
-            {
-              class: 'about__letter',
-              src: './img/main-page/about/letter.svg',
-              alt: 'letter'
-            },
-            {
-              class: 'about__claude-b',
-              src: './img/main-page/about/claude-b.svg',
-              alt: 'claude-b'
-            },
-             {
-              class: 'about__claude-m',
-              src: './img/main-page/about/claude-m.svg',
-              alt: 'claude-m'
-            },
-            {
-              class: 'about__claude-s',
-              src: './img/main-page/about/claude-s.svg',
-              alt: 'claude-s'
-            }
+              {
+                  class: 'about__letter',
+                  src: './img/main-page/about/letter.svg',
+                  alt: 'letter'
+              },
+              {
+                  class: 'about__claude-b',
+                  src: './img/main-page/about/claude-b.svg',
+                  alt: 'claude-b'
+              },
+              {
+                  class: 'about__claude-s',
+                  src: './img/main-page/about/claude-s.svg',
+                  alt: 'claude-s'
+              }
           ]
         each imageItem in imageList
           img(class=imageItem.class, src=imageItem.src, alt=imageItem.alt)
       .about__wrapper
-        h3.about__title Подписка на новость
         form.about__form
-          input.about__form-input(
-            type="email",
-            name="email",
-            placeholder="Email"
-          )
-          input.about__form-submit.button(
-            type="submit",
-            name="submit",
-            value="Подписаться"
-          )
+          fieldset.about__form-fieldset
+            legend.about__title Подписка на новость
+            input.about__form-input(
+              type="email",
+              name="email",
+              placeholder="Email"
+            )
+            input.about__form-submit.button(
+              type="submit",
+              name="submit",
+              value="Подписаться"
+            )

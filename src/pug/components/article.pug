@@ -1,7 +1,7 @@
 article.article
   .article__inner
-    img.article__img(src=card.src, alt=card.alt)
+    img.article__img(src=articleItem.src, alt=articleItem.alt)
   .article__text
-    a.article__link(href="article.html")= card.link
-    p.article__date= card.date
-      a.article__author(href="author.html")= card.author
+    a.article__link(href="article.html")= articleItem.link
+    p.article__date= articleItem.date
+    a.article__author(href="author.html")= articleItem.author
