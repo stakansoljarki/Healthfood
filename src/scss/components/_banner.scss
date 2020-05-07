@@ -1,0 +1,40 @@
+.banner {
+	position: relative;
+
+	border-radius: 30px;
+	&:after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+
+		}
+	&--small {
+		width: 200px;
+		height: 200px;
+		margin: 20px auto 0;
+
+		background-color: rgb(252, 239, 206);
+		&:after {
+			content: "200x200";
+
+			font-size: 26px;
+			font-weight: 700;
+			}
+		}
+	&--large {
+		width: 100%;
+		max-width: 730px;
+		height: 90px;
+		margin: 80px auto 0;
+
+		background-color: rgba(34, 36, 46, 0.2);
+		&:after {
+			content: "730x90";
+
+			font-size: 30px;
+
+			}
+		}
+	}

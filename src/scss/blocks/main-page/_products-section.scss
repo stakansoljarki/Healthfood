@@ -77,19 +77,6 @@
 			color: $color-text-main;
 			}
 		}
-	&__banner {
-		width: 200px;
-		height: 200px;
-		margin: 20px auto 0;
-
-		background-color: rgb(252, 239, 206);
-		&:after {
-			content: "200x200";
-
-			font-size: 26px;
-			font-weight: 700;
-			}
-		}
 	}
 .sidebar-container {
 	z-index: 2;
