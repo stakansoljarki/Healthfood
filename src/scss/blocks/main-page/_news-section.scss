@@ -1,4 +1,4 @@
-.news {
+.home {
 	padding-top: 30px;
 	padding-bottom: 50px;
 	&__container {
@@ -37,7 +37,7 @@
 		}
 	}
 @media (max-width: 1023px) {
-	.news {
+	.home {
 		&__container {
 			grid-template-columns: 65% 32%;
 			}
@@ -48,7 +48,7 @@
 		}
 	}
 @media (max-width: 767px) {
-	.news {
+	.home {
 		&__container {
 			grid-template-columns: 100%;
 			grid-column-gap: 0;

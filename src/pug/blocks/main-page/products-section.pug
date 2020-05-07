@@ -40,10 +40,10 @@ section.products
       ]
     each foodItem in foodList
       img(src=foodItem.src, alt=foodItem.alt, class=foodItem.class)
-    .products__content
+    .products__content.grid-container
       .products__wrap
         h2.title Полезные продукты
-        .products__inner
+        .products__inner.grid-container__inner
           -
             let productsList = [
                 {
@@ -114,4 +114,72 @@ section.products
             include ../../components/article
         button.products__button.button Показать еще
       .sidebar-container
-        include ../../components/sidebar
+        aside.products__sidebar.sidebar
+          h3.products__sidebar-title.sidebar__title Последние новости
+          -
+            let sidebarList = [
+                {
+                    titleLink: 'article.html',
+                    linkClass: 'products__sidebar-link',
+                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                    dateClass: 'products__sidebar-date',
+                    date: '01.05.2020',
+                    authorLink: 'author.html',
+                    authorClass: 'products__sidebar-author',
+                    author: 'Евгений Третяк'
+                },
+                {
+                    titleLink: 'article.html',
+                    linkClass: 'products__sidebar-link',
+                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                    dateClass: 'products__sidebar-date',
+                    date: '01.05.2020',
+                    authorLink: 'author.html',
+                    authorClass: 'products__sidebar-author',
+                    author: 'Евгений Третяк'
+                },
+                {
+                    titleLink: 'article.html',
+                    linkClass: 'products__sidebar-link',
+                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                    dateClass: 'products__sidebar-date',
+                    date: '01.05.2020',
+                    authorLink: 'author.html',
+                    authorClass: 'products__sidebar-author',
+                    author: 'Евгений Третяк'
+                },
+                {
+                    titleLink: 'article.html',
+                    linkClass: 'products__sidebar-link',
+                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                    dateClass: 'products__sidebar-date',
+                    date: '01.05.2020',
+                    authorLink: 'author.html',
+                    authorClass: 'products__sidebar-author',
+                    author: 'Евгений Третяк'
+                },
+                {
+                    titleLink: 'article.html',
+                    linkClass: 'products__sidebar-link',
+                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                    dateClass: 'products__sidebar-date',
+                    date: '01.05.2020',
+                    authorLink: 'author.html',
+                    authorClass: 'products__sidebar-author',
+                    author: 'Евгений Третяк'
+                },
+                {
+                    titleLink: 'article.html',
+                    linkClass: 'products__sidebar-link',
+                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                    dateClass: 'products__sidebar-date',
+                    date: '01.05.2020',
+                    authorLink: 'author.html',
+                    authorClass: 'products__sidebar-author',
+                    author: 'Евгений Третяк'
+                }
+            ]
+          each sidebarItem in sidebarList
+            include ../../components/sidebar
+        .sidebar__banner
+          p.sidebar__description 200x200
