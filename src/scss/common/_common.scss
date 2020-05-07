@@ -92,22 +92,14 @@
 .banner {
 	position: relative;
 
-	width: 200px;
-	height: 200px;
-	margin: 20px auto 0;
-
 	border-radius: 30px;
-	background-color: rgb(252, 239, 206);
 	&:after {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 
-		content: "200x200";
 		transform: translate(-50%, -50%);
 
-		font-size: 26px;
-		font-weight: 700;
 		}
 	}
 
