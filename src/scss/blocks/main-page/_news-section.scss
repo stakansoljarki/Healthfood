@@ -1,4 +1,4 @@
-.news {
+.home {
 	padding-top: 30px;
 	padding-bottom: 50px;
 	&__container {
@@ -6,8 +6,8 @@
 
 		display: grid;
 
-		grid-template-columns: minmax(450px,74.36%) minmax(254px,1fr);
-		grid-column-gap: 3%;
+		grid-template-columns: minmax(450px,74.5%) minmax(254px,23.1%);
+		grid-column-gap: 2.4%;
 		}
 	&__broccoli {
 		position: absolute;
@@ -37,7 +37,7 @@
 		}
 	}
 @media (max-width: 1023px) {
-	.news {
+	.home {
 		&__container {
 			grid-template-columns: 65% 32%;
 			}
@@ -48,7 +48,7 @@
 		}
 	}
 @media (max-width: 767px) {
-	.news {
+	.home {
 		&__container {
 			grid-template-columns: 100%;
 			grid-column-gap: 0;

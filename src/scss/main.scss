@@ -13,12 +13,13 @@
 @import "common/common";
 @import "common/slick-slide";
 
-
 // components
 @import "components/article";
 @import "components/burger";
 @import "components/nav-panel";
 @import "components/sidebar";
+@import "components/breadcrumbs";
+@import "components/banner";
 
 // layout
 @import "layout/header";
@@ -28,3 +29,6 @@
 @import "blocks/main-page/news-section";
 @import "blocks/main-page/products-section";
 @import "blocks/main-page/about-section";
+
+// news-page
+@import "blocks/news-page/news-section";
