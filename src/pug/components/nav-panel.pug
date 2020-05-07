@@ -1,0 +1,40 @@
+.subheader
+  .subheader__container.container
+    ul.subheader__list
+      -
+        let subheaderList = [
+            {
+                href: 'index.html',
+                text: 'О нас'
+            },
+            {
+                href: 'news.html',
+                text: 'Новости'
+            },
+            {
+                href: 'healthy-foods.html',
+                text: 'Полезные продукты'
+            },
+            {
+                href: 'recipes.html',
+                text: 'Рецепты здоровых блюд'
+            },
+            {
+                href: 'calorie.html',
+                text: 'Таблицы калорийности'
+            },
+            {
+                href: 'vitamins.html',
+                text: 'Витамины и полезные компоненты'
+            },
+            {
+                href: '#',
+                text: 'Контакты'
+            }
+        ]
+      each subheaderItem in subheaderList
+        li
+          a.subheader__link(href=subheaderItem.href)= subheaderItem.text
+    button.search(type="submit")
+      +search
+    input.search__inp(type="search", placeholder="Поиск")

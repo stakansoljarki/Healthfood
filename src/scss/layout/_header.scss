@@ -1,0 +1,161 @@
+.header {
+	&__container {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		padding-top: 10px;
+		padding-bottom: 10px;
+		}
+	&__logo {
+		&-submain {
+			display: none;
+			}
+		}
+	&__menu {
+		display: flex;
+
+		&-link {
+			display: flex;
+			align-items: center;
+
+			margin: 0 15px;
+			&:hover {
+				color: $color-hover-main;
+				}
+			}
+		&-link {
+			&:not(:last-child) {
+				&:hover {
+					& path {
+						fill: $color-hover-main;
+						}
+					}
+				}
+			&:last-child {
+				&:hover {
+					& path {
+						stroke: $color-hover-main;
+						}
+					}
+				}
+			}
+		&-link > :first-child {
+			margin-right: 10px;
+			}
+
+		&-description {
+			max-width: 100px;
+			}
+		}
+	}
+.social {
+	display: flex;
+
+	&__link {
+		display: block;
+
+		padding: 6px;
+
+		color: $color-social;
+		border: 1px solid $color-social;
+		border-radius: 50%;
+		&:not(:last-child) {
+			margin-right: 10px;
+			}
+		&--header-hover {
+			&:hover {
+				color: $color-text-submain;
+				border: 1px solid $color-hover-main;
+				background-color: $color-hover-main;
+				}
+			}
+		}
+	}
+
+@media (max-width: 1199px) {
+	.header {
+		background: linear-gradient(90deg, #8ecb7e -74.27%, #66aa52 100%);
+		&__logo > :first-child {
+			display: block;
+			}
+		&__logo > :last-child {
+			display: none;
+			}
+		&__menu {
+			justify-content: space-between;
+
+			padding: 20px 80px;
+
+			color: $color-text-submain;
+			&-link {
+				justify-content: center;
+
+				width: 100%;
+				margin: 0;
+
+				border-radius: 10px;
+				&:not(:last-child) {
+					& path {
+						fill: $color-text-submain;
+						}
+					}
+				&:last-child {
+					& path {
+						stroke: $color-text-submain;
+						}
+					}
+				&:hover {
+					color: $color-text-main;
+					background-color: $background-color-submain;
+					&:not(:last-child) {
+						& path {
+							fill: $color-text-main;
+							}
+						}
+					&:last-child {
+						& path {
+							stroke: $color-text-main;
+							}
+						}
+					}
+				}
+			}
+		}
+	.social {
+		display: none;
+		}
+	.subheader {
+		&-container {
+			display: flex;
+			flex-direction: column;
+			}
+		&-block {
+			flex-direction: column;
+			}
+		}
+	}
+@media (max-width: 767px) {
+	.header {
+		&__menu {
+			align-items: center;
+			flex-direction: column;
+
+			padding: 0;
+
+			&-link {
+				justify-content: center;
+
+				width: 100%;
+				margin: 0;
+				padding: 20px 0;
+
+				border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+				border-radius: 0;
+				}
+			}
+		}
+	}

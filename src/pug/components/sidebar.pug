@@ -1,0 +1,52 @@
+aside.sidebar
+  h3.sidebar__title Последние новости
+  -
+    let sidebarList = [
+      {
+        titleLink: 'article.html',
+        title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+        date: '01.05.2020',
+        authorLink: 'author.html',
+        author: 'Евгений Третяк'
+      },
+       {
+        titleLink: 'article.html',
+        title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+        date: '01.05.2020',
+        authorLink: 'author.html',
+        author: 'Евгений Третяк'
+      },
+       {
+        titleLink: 'article.html',
+        title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+        date: '01.05.2020',
+        authorLink: 'author.html',
+        author: 'Евгений Третяк'
+      },
+       {
+        titleLink: 'article.html',
+        title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+        date: '01.05.2020',
+        authorLink: 'author.html',
+        author: 'Евгений Третяк'
+      },
+       {
+        titleLink: 'article.html',
+        title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+        date: '01.05.2020',
+        authorLink: 'author.html',
+        author: 'Евгений Третяк'
+      },
+       {
+        titleLink: 'article.html',
+        title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+        date: '01.05.2020',
+        authorLink: 'author.html',
+        author: 'Евгений Третяк'
+      }
+    ]
+  each sidebarItem in sidebarList
+    .sidebar__card
+      a.sidebar__link(href=sidebarItem.titleLink)= sidebarItem.title
+      p.sidebar__date= sidebarItem.date
+        a.sidebar__author(href=sidebarItem.authorLink)= sidebarItem.author

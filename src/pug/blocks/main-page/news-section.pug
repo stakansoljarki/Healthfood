@@ -1,0 +1,41 @@
+section.news
+  .news__container.container
+    article.article
+      .article__inner
+        img.article__img(
+          src="./img/main-page/main-box.jpg",
+          alt="baked piece of meat with vegetables"
+        )
+      img.article__vector(src="./img/main-page/main-top.svg", alt="vector")
+      p.article__tag Популярные новости
+      .article__text.article__text--padding
+        a.article__link.article__link--size(href="article.html") Сколько времени нужно питаться здорово, чтобы почувствовать пользу
+        p.article__date 01.05.2020
+          a.article__author(href="author.html") Евгений Третяк
+    sidebar.news__sidebar
+      -
+        let articleList = [
+            {
+                src: './img/main-page/main-box.jpg',
+                atl: 'baked piece of meat with vegetables',
+                link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                date: '01.05.2020',
+                author: 'Евгений Третяк'
+            },
+            {
+                src: './img/main-page/main-box.jpg',
+                atl: 'baked piece of meat with vegetables',
+                link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                date: '01.05.2020',
+                author: 'Евгений Третяк'
+            },
+            {
+                src: './img/main-page/main-box.jpg',
+                atl: 'baked piece of meat with vegetables',
+                link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                date: '01.05.2020',
+                author: 'Евгений Третяк'
+            }
+        ]
+      each articleItem in articleList
+        include ../../components/article

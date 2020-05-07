@@ -1,0 +1,55 @@
+.sidebar {
+	z-index: 2;
+
+	padding: 30px;
+
+	border-radius: 30px;
+	background-color: $background-color-white;
+	box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+	&__card {
+		&:not(:last-child) {
+			margin-bottom: 25px;
+			}
+		}
+	&__link {
+		display: block;
+
+		margin-bottom: 10px;
+
+		font-weight: 700;
+		line-height: 1.4;
+		}
+	&__date {
+		width: 100%;
+
+		color: rgba(34, 36, 46, 0.8);
+
+		font-size: 12px;
+		line-height: 1.4;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+			}
+		}
+	&__author {
+		margin-left: 10px;
+		}
+	&__link,
+	&__author {
+		cursor: pointer;
+		&:hover {
+			color: $color-hover-submain;
+			}
+		}
+	&__title {
+		width: 100%;
+		margin-bottom: 30px;
+
+		text-transform: uppercase;
+
+		color: $color-text-main;
+
+		font-size: 26px;
+		font-weight: 700;
+		line-height: 1.4;
+		}
+	}

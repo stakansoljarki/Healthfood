@@ -1,13 +1,18 @@
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     include meta/meta
-    title PROJECT
+    title Healthfood
     include link/link
   body
+    include components/icons/icons
+
     include layout/header
 
-    //include section/
+    include components/nav-panel
+    include blocks/main-page/news-section
+    include blocks/main-page/products-section
+    include blocks/main-page/about-section
 
     include layout/footer
     include scripts/scripts

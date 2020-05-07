@@ -1,0 +1,37 @@
+.burger {
+	display: none;
+	@media (max-width: 1199px) {
+		position: relative;
+
+		display: block;
+		overflow: hidden;
+
+		width: 27px;
+		height: 27px;
+
+		border: 2px solid #fff;
+		border-radius: 50%;
+		}
+	}
+.closeBurger {
+	position: absolute;
+	top: 50%;
+	left: -50%;
+
+	transition: all 0.3s linear;
+	transform: translate(-50%, -50%);
+	.active & {
+		left: 50%;
+		}
+	}
+.dotsBurger {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transition: all 0.3s linear;
+	transform: translate(-50%, -50%);
+	.active & {
+		left: 150%;
+		}
+	}
