@@ -1,0 +1,45 @@
+.news {
+	&__container {
+		padding-top: 30px;
+		padding-bottom: 100px;
+		}
+
+
+
+	&-sidebar {
+		background: linear-gradient(210.4deg, #a1da93 -51.25%, #67ab53 114.89%);
+
+		.sidebar__title {
+			color: #fff;
+			}
+
+		.sidebar__link {
+			color: #fff;
+			}
+
+		.sidebar__date,
+		.sidebar__author {
+			color: rgba(255, 255, 255, 0.8);
+			}
+
+		.sidebar__link,
+		.sidebar__author {
+			&:hover {
+				color: #f8d851;
+				}
+			}
+		}
+	}
+
+.slider {
+	width: 100%;
+	}
+
+.inner {
+	display: grid;
+
+	grid-template-columns: 31% 31% 31%;
+	grid-template-rows: 260px 260px 260px;
+	grid-column-gap: 3.5%;
+	grid-row-gap: 30px;
+	}
