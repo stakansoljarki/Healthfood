@@ -48,8 +48,8 @@
 	&__inner {
 		display: grid;
 
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 260px 260px 260px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 260px);
 		grid-column-gap: 3.5%;
 		grid-row-gap: 30px;
 		}
