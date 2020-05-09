@@ -1,9 +1,9 @@
 function search() {
-  $(".search").click(function () {
+  $(".search-button").click(function () {
     if ($(window).width() < 1199) {
-      $(".search__inp").toggleClass("open").focus();
+      $(".search-input").toggleClass("open").focus();
     } else {
-      $(".search__inp").slideToggle(function () {
+      $(".search-input").slideToggle(function () {
         $(this).focus();
       });
     }

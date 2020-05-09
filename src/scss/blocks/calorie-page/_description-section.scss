@@ -1,0 +1,16 @@
+.description {
+	padding-bottom: 60px;
+	&__wrap {
+		width: 100%;
+		max-width: 970px;
+		}
+	&__item {
+		color: $color-text-main;
+
+		line-height: 19px;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+			}
+		}
+	}
