@@ -1,0 +1,840 @@
+section.video.section--padding
+  .container
+    .breadcrumbs
+      ul.breadcrumbs__list
+        -
+          let newsBreadcrumbsList = [
+              {
+                  href: 'index.html',
+                  text: 'Главная'
+              },
+              {
+                  href: 'healthy-foods.html',
+                  text: 'Полезные продукты'
+              }
+          ]
+        each breadcrumbsItem in newsBreadcrumbsList
+          include ../../components/breadcrumbs
+    .video__wrap
+      h1.title Полезные продукты
+      .slider
+        -
+          let sliderBoxList = [
+              {
+                  sliderBoxItem: [
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      }
+                  ],
+              },
+              {
+                  sliderBoxItem: [
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      }
+                  ],
+              },
+              {
+                  sliderBoxItem: [
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      }
+                  ],
+              },
+              {
+                  sliderBoxItem: [
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      }
+                  ],
+              },
+              {
+                  sliderBoxItem: [
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      }
+                  ],
+              },
+              {
+                  sliderBoxItem: [
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      }
+                  ],
+              },
+              {
+                  sliderBoxItem: [
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      }
+                  ],
+              },
+              {
+                  sliderBoxItem: [
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      }
+                  ],
+              },
+              {
+                  sliderBoxItem: [
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      }
+                  ],
+              },
+              {
+                  sliderBoxItem: [
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      },
+                      {
+                          src: './img/main-page/main-box.jpg',
+                          atl: 'baked piece of meat with vegetables',
+                          link: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
+                          date: '01.05.2020',
+                          author: 'Евгений Третяк'
+                      }
+                  ],
+              }
+          ]
+        each sliderBoxItem in sliderBoxList
+          .slider-box
+            .video__inner
+              each articleItem in sliderBoxItem.sliderBoxItem
+                include ../../components/article
+              .banner.video__banner
+      .banner.banner--large
