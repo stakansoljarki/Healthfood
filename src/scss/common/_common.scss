@@ -89,3 +89,29 @@
 	}
 
 // grid-container
+
+// text
+
+.text-block {
+	padding-top: 30px;
+
+	border-top: 1px solid #eaecf0;
+	&--margin {
+		margin-top: 100px;
+		}
+	&__wrap {
+		max-width: 770px;
+		margin: 0 auto;
+		}
+	&__description {
+		color: $color-social;
+
+		font-size: 17px;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+			}
+		}
+	}
+
+//text
