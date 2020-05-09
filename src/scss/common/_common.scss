@@ -25,12 +25,12 @@
 	margin: 0 auto;
 
 	cursor: pointer;
-	transition: 0.5s;
+	transition: 0.5s ease-in;
 	text-align: center;
 
 	border-radius: 30px;
 
-	font-weight: bold;
+	font-weight: 700;
 	}
 .menu-open {
 	position: fixed;
