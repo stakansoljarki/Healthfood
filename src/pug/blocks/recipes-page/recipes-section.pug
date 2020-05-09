@@ -1,4 +1,4 @@
-section.news.section--padding
+section.recipes.section--padding
   .container
     .breadcrumbs
       ul.breadcrumbs__list
@@ -9,8 +9,8 @@ section.news.section--padding
                   text: 'Главная'
               },
               {
-                  href: 'news.html',
-                  text: 'Новости'
+                  href: 'recipes.html',
+                  text: 'Рецепты здоровых блюд'
               }
           ]
         each breadcrumbsItem in newsBreadcrumbsList
@@ -697,73 +697,137 @@ section.news.section--padding
               .grid-container__inner
                 each articleItem in sliderBoxItem.sliderBoxItem
                   include ../../components/article
-        .banner.banner--large
-      .sidebar-container
-        aside.news__sidebar.sidebar
-          h3.news__sidebar-title.sidebar__title Последние новости
-          -
-            let sidebarList = [
-                {
-                    titleLink: 'article.html',
-                    linkClass: 'news__sidebar-link',
-                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
-                    dateClass: 'news__sidebar-date',
-                    date: '01.05.2020',
-                    authorLink: 'author.html',
-                    authorClass: 'news__sidebar-author',
-                    author: 'Евгений Третяк'
-                },
-                {
-                    titleLink: 'article.html',
-                    linkClass: 'news__sidebar-link',
-                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
-                    dateClass: 'news__sidebar-date',
-                    date: '01.05.2020',
-                    authorLink: 'author.html',
-                    authorClass: 'news__sidebar-author',
-                    author: 'Евгений Третяк'
-                },
-                {
-                    titleLink: 'article.html',
-                    linkClass: 'news__sidebar-link',
-                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
-                    dateClass: 'news__sidebar-date',
-                    date: '01.05.2020',
-                    authorLink: 'author.html',
-                    authorClass: 'news__sidebar-author',
-                    author: 'Евгений Третяк'
-                },
-                {
-                    titleLink: 'article.html',
-                    linkClass: 'news__sidebar-link',
-                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
-                    dateClass: 'news__sidebar-date',
-                    date: '01.05.2020',
-                    authorLink: 'author.html',
-                    authorClass: 'news__sidebar-author',
-                    author: 'Евгений Третяк'
-                },
-                {
-                    titleLink: 'article.html',
-                    linkClass: 'news__sidebar-link',
-                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
-                    dateClass: 'news__sidebar-date',
-                    date: '01.05.2020',
-                    authorLink: 'author.html',
-                    authorClass: 'news__sidebar-author',
-                    author: 'Евгений Третяк'
-                },
-                {
-                    titleLink: 'article.html',
-                    linkClass: 'news__sidebar-link',
-                    title: 'Не верьте мифам: топ-5 заблуждений о правильном питании',
-                    dateClass: 'news__sidebar-date',
-                    date: '01.05.2020',
-                    authorLink: 'author.html',
-                    authorClass: 'news__sidebar-author',
-                    author: 'Евгений Третяк'
-                }
-            ]
-          each sidebarItem in sidebarList
-            include ../../components/sidebar
-        .banner.banner--small
+      .sidebar__container
+        aside.recipes__sidebar
+          h3.recipes__title Темы
+          ul.Accordion
+            -
+              let accordionList = [
+                  {
+                      label: 'radios-menu1',
+                      labelText: 'Новые статьи',
+                      id: 'radios-menu1',
+                      sliderBoxItem: [
+                          {
+                              href: '#',
+                              linkText: 'Буддизм',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Здоровое питание',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Реинкарнация',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Йога',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Здоровье',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Разное',
+                          }
+                      ]
+                  },
+                  {
+                      label: 'radios-menu2',
+                      labelText: 'Здоровый образ жизни',
+                      id: 'radios-menu2',
+                      sliderBoxItem: [
+                          {
+                              href: '#',
+                              linkText: 'Буддизм',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Здоровое питание',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Йога',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Здоровье',
+                          }
+                      ]
+                  },
+                  {
+                      label: 'radios-menu3',
+                      labelText: 'Буддизм',
+                      id: 'radios-menu3',
+                      sliderBoxItem: [
+                          {
+                              href: '#',
+                              linkText: 'Буддизм',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Здоровое питание',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Реинкарнация',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Йога',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Отдых',
+                          }
+                      ]
+                  },
+                  {
+                      label: 'radios-menu4',
+                      labelText: 'Книги',
+                      id: 'radios-menu4',
+                      sliderBoxItem: [
+                          {
+                              href: '#',
+                              linkText: 'Буддизм',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Здоровое питание',
+                          }
+                      ]
+                  },
+                  {
+                      label: 'radios-menu5',
+                      labelText: 'Разное',
+                      id: 'radios-menu5',
+                      sliderBoxItem: [
+                          {
+                              href: '#',
+                              linkText: 'Буддизм',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Здоровое питание',
+                          },
+                          {
+                              href: '#',
+                              linkText: 'Йога',
+                          }
+                      ]
+                  }
+              ]
+            each accordionItem in accordionList
+              li.accordion__item
+                label.accordion__item-label(for=accordionItem.label)= accordionItem.labelText
+                input.accordion__item-input(
+                  id=accordionItem.id,
+                  type="radio",
+                  name="menu"
+                )
+                ul.accordion__list
+                  each accordionSubItem in accordionItem.sliderBoxItem
+                    li.accordion__list-item
+                      a.accordion__list-link(href=accordionSubItem.href)= accordionSubItem.linkText

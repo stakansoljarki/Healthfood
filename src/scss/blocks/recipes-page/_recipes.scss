@@ -1,0 +1,106 @@
+.recipes {
+	&__sidebar {
+		padding: 30px 0;
+
+		border-radius: 30px;
+		background: $background-color-white;
+		box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+		}
+	&__title {
+		margin-bottom: 20px;
+		padding: 0 20px;
+
+		text-transform: uppercase;
+
+		color: $color-hover-main;
+
+		font-size: 26px;
+		font-weight: 700;
+		}
+	}
+
+.accordion {
+	&__item {
+		border-top: 1px solid #eaecf0;
+		&:last-child {
+			border-bottom: 1px solid #eaecf0;
+			}
+		&-input {
+			display: none;
+			&:checked + .accordion__list > .accordion__list-item {
+				height: 2.5em;
+
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				}
+			}
+		&-label {
+			display: block;
+
+			width: 100%;
+			padding: 15px 20px;
+
+			cursor: pointer;
+			transition: 0.4s;
+
+			color: $color-text-main;
+			background-color: $background-color-white;
+
+			font-weight: 700;
+			&:after {
+				float: right;
+
+				margin-left: 5px;
+
+				content: "▼";
+
+				color: #8cc97c;
+
+				font-weight: bold;
+				}
+			&:hover {
+				color: $color-hover-main;
+				}
+
+			}
+		}
+	&__list {
+		padding: 0 20px;
+
+		background-color: #8cc97c;
+		&-item {
+			overflow: hidden;
+
+			height: 0;
+
+			transition-duration: 0.3s;
+			transition-property: height, -webkit-transform;
+			transition-property: transform, height;
+			transition-property: transform, height, -webkit-transform;
+			-webkit-transform: scale(0);
+			transform: scale(0);
+			-webkit-transform-origin: 0 0;
+			transform-origin: 0 0;
+
+			font-weight: 700;
+			line-height: 2.5;
+			}
+		&-link {
+			display: block;
+
+			text-decoration: none;
+
+			color: $color-text-submain;
+			&:hover {
+				color: $color-hover-submain;
+				}
+			}
+		}
+	}
+@media (max-width: 767px) {
+	.recipes {
+		&__sidebar {
+			margin-top: 50px;
+			}
+		}
+	}
