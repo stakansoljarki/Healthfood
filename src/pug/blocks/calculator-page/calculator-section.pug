@@ -16,149 +16,147 @@ section.calculator.section--padding
         each breadcrumbsItem in newsBreadcrumbsList
           include ../../components/breadcrumbs
     .calculator__container
-      .calculator__wrap
-        h1.title Калькулятор для похудения
-        p.calculator__subtitle Рекомендуем попробовать наш новый калькулятор для похудения, который поможет выполнить расчет ккал для снижения веса в зависимости от ряда условий.
-        .calculator__inner
-          -
-            let calculatorList = [
-                {
-                    title: 'Возраст :',
-                    formTitle: 'Пол :',
-                    formList: [
-                        {
-                            inputId: 'male',
-                            inputName: 'gender',
-                            value: 'male',
-                            label: 'male',
-                            labelText: 'Мужской'
-                        },
-                        {
-                            inputId: 'female',
-                            inputName: 'gender',
-                            value: 'female',
-                            label: 'female',
-                            labelText: 'Женский'
-                        }
-                    ]
-                },
-                {
-                    title: 'Вес :',
-                    formTitle: 'Измерять в :',
-                    formList: [
-                        {
-                            inputId: 'kilo',
-                            inputName: 'weight',
-                            value: 'kilo',
-                            label: 'kilo',
-                            labelText: 'В киллограммах'
-                        },
-                        {
-                            inputId: 'lb',
-                            inputName: 'weight',
-                            value: 'lb',
-                            label: 'lb',
-                            labelText: 'В фунтах'
-                        }
-                    ]
-                },
-            ]
-          each calculatorItem in calculatorList
-            .calculator__info.calculator__info--margin
-              .calculator__info-wrap
-                p.calculator__title= calculatorItem.title
-                input.calculator__info-item(type="text")
-              form.calculator__form
-                p.calculator__title= calculatorItem.formTitle
-                .calculator__form-wrap
-                  each formItem in calculatorItem.formList
-                    input.calculator__form-item(
-                      id=formItem.inputId,
-                      type="radio",
-                      name=formItem.inputName,
-                      value=formItem.value
-                    )
-                    label.calculator__form-label(for=formItem.label)= formItem.labelText
-          .calculator__info.calculator__info--margin
-            .calculator__info-wrapper
-              p.calculator__title Рост :
-              input.calculator__info-item(type="text")
-              span.calculator__info-span см.
-            .calculator__training
-              fieldset
-                legend.calculator__title Физическая активность
-                form.calculator__training-form
-                  input.calculator__training-item(list="training")
-                  datalist#training
-                    -
-                      let dataList = [
-                          'Не занимаюсь',
-                          '1 раз в неделю',
-                          '2 раза в неделю',
-                          '3 раза в неделю',
-                          '4 раза в неделю',
-                          '5 раз в неделю'
-                      ]
-                    each dataItem in dataList
-                      option= dataItem
-          .calculator__result
-            .calculator__result-wrap
+      form.form
+        fieldset.form__text
+          legend.title Калькулятор для похудения
+          p.form__description Рекомендуем попробовать наш новый калькулятор для похудения, который поможет выполнить расчет ккал для снижения веса в зависимости от ряда условий.
+        -
+          let cardList = [
+              {
+                  titleMain: 'Возраст :',
+                  titleSubMain: 'Пол :',
+                  cardItem: [
+                      {
+                          inputId: 'male',
+                          inputName: 'gender',
+                          value: 'male',
+                          label: 'male',
+                          labelText: 'Мужской'
+                      },
+                      {
+                          inputId: 'female',
+                          inputName: 'gender',
+                          value: 'female',
+                          label: 'female',
+                          labelText: 'Женский'
+                      }
+                  ]
+              },
+              {
+                  titleMain: 'Вес :',
+                  titleSubMain: 'Измерять в :',
+                  cardItem: [
+                      {
+                          inputId: 'kilo',
+                          inputName: 'weight',
+                          value: 'kilo',
+                          label: 'kilo',
+                          labelText: 'В киллограммах'
+                      },
+                      {
+                          inputId: 'lb',
+                          inputName: 'weight',
+                          value: 'lb',
+                          label: 'lb',
+                          labelText: 'В фунтах'
+                      }
+                  ]
+              }
+          ]
+        each cardItem in cardList
+          .form__card
+            fieldset.form__calculator
+              legend.form__calculator-title= cardItem.titleMain
+              input.form__calculator-item(type="text")
+            fieldset.form__calculator
+              legend.form__calculator-title= cardItem.titleSubMain
+              .form__calculator-inner
+                each formItem in cardItem.cardItem
+                  input.form__calculator-input(
+                    id=formItem.inputId,
+                    type="radio",
+                    name=formItem.inputName,
+                    value=formItem.value
+                  )
+                  label.form__calculator-label(for=formItem.label)= formItem.labelText
+        .form__card
+          fieldset.form__calculator.form__calculator--position
+            legend.form__calculator-title Рост :
+            input.form__calculator-item(type="text")
+            span.form__calculator-span см.
+          fieldset.form__calculator
+            legend.form__calculator-title Физическая активность
+            input.form__calculator-list.form__calculator-item(list="training")
+            datalist#training
               -
-                let resultList = [
-                    {
-                        resultTitle: 'Результат в :',
-                        resultItem: [
-                            {
-                                resultId: 'kilocalories',
-                                resultName: 'kilocalories',
-                                resultValue: 'weight',
-                                labelFor: 'kilocalories',
-                                labelText: 'Ккал'
-                            },
-                            {
-                                resultId: 'Kilojoules',
-                                resultName: 'Kilojoules',
-                                resultValue: 'weight',
-                                labelFor: 'Kilojoules',
-                                labelText: 'Килоджоулях'
-                            },
-                
-                        ]
-                    },
-                    {
-                        resultTitle: 'Физическая активность',
-                        resultItem: [
-                            {
-                                resultId: 'miffline',
-                                resultName: 'miffline',
-                                resultValue: 'weight',
-                                labelFor: 'miffline',
-                                labelText: 'Миффлина - Сан Жеора'
-                            },
-                            {
-                                resultId: 'harris',
-                                resultName: 'harris',
-                                resultValue: 'weight',
-                                labelFor: 'harris',
-                                labelText: 'Харриса-Бенедикта'
-                            },
-                
-                        ]
-                    }
+                let dataList = [
+                    'Не занимаюсь',
+                    '1 раз в неделю',
+                    '2 раза в неделю',
+                    '3 раза в неделю',
+                    '4 раза в неделю',
+                    '5 раз в неделю'
                 ]
-              each resultItem in resultList
-                fieldset
-                  legend.calculator__title= resultItem.resultTitle
-                  form.calculator__result-inner
-                    each formItems in resultItem.resultItem
-                      .calculator__result-form
-                        input.calculator__result-item(
-                          id=formItems.resultId,
-                          type="radio",
-                          name=formItems.resultName,
-                          value=formItems.resultValue
-                        )
-                        label(for=formItems.labelFor)= formItems.labelText
+              each dataItem in dataList
+                option= dataItem
+        .form__card
+          -
+            let resultList = [
+                {
+                    resultTitle: 'Результат в :',
+                    resultItem: [
+                        {
+                            resultId: 'kilocalories',
+                            resultName: 'kilocalories',
+                            resultValue: 'weight',
+                            labelFor: 'kilocalories',
+                            labelText: 'Ккал'
+                        },
+                        {
+                            resultId: 'Kilojoules',
+                            resultName: 'Kilojoules',
+                            resultValue: 'weight',
+                            labelFor: 'Kilojoules',
+                            labelText: 'Килоджоулях'
+                        },
+            
+                    ]
+                },
+                {
+                    resultTitle: 'Физическая активность',
+                    resultItem: [
+                        {
+                            resultId: 'miffline',
+                            resultName: 'miffline',
+                            resultValue: 'weight',
+                            labelFor: 'miffline',
+                            labelText: 'Миффлина - Сан Жеора'
+                        },
+                        {
+                            resultId: 'harris',
+                            resultName: 'harris',
+                            resultValue: 'weight',
+                            labelFor: 'harris',
+                            labelText: 'Харриса-Бенедикта'
+                        },
+            
+                    ]
+                }
+            ]
+          each resultItem in resultList
+            fieldset.form__calculator.form__calculator--column
+              legend.form__calculator-title= resultItem.resultTitle
+
+              each formItems in resultItem.resultItem
+                .form__calculator-wrap
+                  input.form__calculator-input(
+                    id=formItems.resultId,
+                    type="radio",
+                    name=formItems.resultName,
+                    value=formItems.resultValue
+                  )
+                  label(for=formItems.labelFor)= formItems.labelText
+        input.form__button.button(type="submit", value="Вычислить")
       .calculator__wrapper
         table.calculator__table
           tr
@@ -241,4 +239,3 @@ section.calculator.section--padding
             tr.calculator__table-list
               each rowItem in tableItem.tableItem
                 td.calculator__table-item= rowItem
-        button.calculator__table-button.button Вычислить
