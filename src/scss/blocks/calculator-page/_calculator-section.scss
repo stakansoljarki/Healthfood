@@ -67,7 +67,7 @@
 
 			border: 1px solid #7a7c82;
 			border-radius: 50%;
-			background-color: #fff;
+			background-color: $background-color-white;
 			}
 		&-label {
 			&:not(:last-child) {
@@ -101,6 +101,118 @@
 			}
 		&-item {
 			margin-right: 5px;
+			}
+		}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+
+		width: 58%;
+		}
+
+
+	&__table {
+		margin-bottom: 30px;
+
+		box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+
+		&-title,
+		&-item {
+			padding: 15px 10px 15px 30px;
+
+			&:not(:nth-child(4n + 1)) {
+				text-align: center;
+				}
+			}
+		&-title {
+			color: white;
+			background-color: $background-color-main;
+			}
+		&-list {
+			&:nth-child(even) {
+				background-color: #f2f2f2;
+				}
+
+			&:hover {
+				background-color: #ddd;
+				}
+			}
+		&-item {
+			&:not(:first-child) {
+				text-align: center;
+				}
+			&:nth-child(2) {
+				display: none;
+				}
+			}
+		&-button {
+			width: 100%;
+
+			color: $color-text-main;
+			background-color: $background-color-submain;
+
+			font-size: 18px;
+
+			&:hover {
+				color: $color-hover-submain;
+				background-color: $background-color-main;
+				}
+			}
+		}
+	}
+@media (max-width: 1120px) {
+	.calculator {
+		&__container {
+			align-items: center;
+			flex-direction: column;
+			}
+
+		&__wrap {
+			width: 100%;
+			max-width: 615px;
+			margin-right: 0;
+			}
+		&__wrapper {
+			width: 100%;
+			max-width: 615px;
+			margin-top: 30px;
+			}
+		}
+	}
+
+@media (max-width: 450px) {
+	.calculator {
+		&__info {
+			flex-direction: column;
+
+			&-span {
+				left: 115px;
+				}
+			&-wrap,
+			&-wrapper {
+				margin-right: 0;
+				margin-bottom: 20px;
+				}
+			}
+		&__result {
+			&-wrap {
+				flex-direction: column;
+				}
+			}
+
+		&__table {
+			&-title,
+			&-item {
+				padding: 15px 10px;
+				}
+			&-item {
+				&:first-child {
+					display: none;
+					}
+				&:nth-child(2) {
+					display: block;
+					}
+				}
 			}
 		}
 	}

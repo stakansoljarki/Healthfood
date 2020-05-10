@@ -159,3 +159,86 @@ section.calculator.section--padding
                           value=formItems.resultValue
                         )
                         label(for=formItems.labelFor)= formItems.labelText
+      .calculator__wrapper
+        table.calculator__table
+          tr
+            -
+              let titleList = [
+                  '',
+                  'Быстрая потеря веса',
+                  'Потеря веса',
+                  'Не изменяя вес'
+              ]
+            each titleItem in titleList
+              th.calculator__table-title= titleItem
+          -
+            let tableList = [
+                {
+                    tableItem: [
+                        'Понедельник',
+                        'Пн',
+                        '1789',
+                        '2386',
+                        '2982',
+                    ]
+                },
+                {
+                    tableItem: [
+                        'Вторник',
+                        'Вт',
+                        '1585',
+                        '1909',
+                        '2386',
+                    ]
+                },
+                {
+                    tableItem: [
+                        'Среда',
+                        'Ср',
+                        '2147',
+                        '2863',
+                        '3578',
+                    ]
+                },
+                {
+                    tableItem: [
+                        'Четверг',
+                        'Чт',
+                        '2147',
+                        '2863',
+                        '3578',
+                    ]
+                },
+                {
+                    tableItem: [
+                        'Пятница',
+                        'Пт',
+                        '2147',
+                        '2863',
+                        '3578',
+                    ]
+                },
+                {
+                    tableItem: [
+                        'Суббота',
+                        'Сб',
+                        '2147',
+                        '2863',
+                        '3578',
+                    ]
+                },
+                {
+                    tableItem: [
+                        'Воскресенье',
+                        'Вс',
+                        '2147',
+                        '2863',
+                        '3578',
+                    ]
+                }
+            ]
+          each tableItem in tableList
+            tr.calculator__table-list
+              each rowItem in tableItem.tableItem
+                td.calculator__table-item= rowItem
+        button.calculator__table-button.button Вычислить
