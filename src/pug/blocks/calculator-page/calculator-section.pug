@@ -16,226 +16,85 @@ section.calculator.section--padding
         each breadcrumbsItem in newsBreadcrumbsList
           include ../../components/breadcrumbs
     .calculator__container
-      form.form
-        fieldset.form__text
-          legend.title Калькулятор для похудения
-          p.form__description Рекомендуем попробовать наш новый калькулятор для похудения, который поможет выполнить расчет ккал для снижения веса в зависимости от ряда условий.
+      include ../../components/form
+      table.calculator__table
+        tr
+          -
+            let titleList = [
+                '',
+                'Быстрая потеря веса',
+                'Потеря веса',
+                'Не изменяя вес'
+            ]
+          each titleItem in titleList
+            th.calculator__table-title= titleItem
         -
-          let cardList = [
+          let tableList = [
               {
-                  titleMain: 'Возраст :',
-                  titleSubMain: 'Пол :',
-                  cardItem: [
-                      {
-                          inputId: 'male',
-                          inputName: 'gender',
-                          value: 'male',
-                          label: 'male',
-                          labelText: 'Мужской'
-                      },
-                      {
-                          inputId: 'female',
-                          inputName: 'gender',
-                          value: 'female',
-                          label: 'female',
-                          labelText: 'Женский'
-                      }
+                  tableItem: [
+                      'Понедельник',
+                      'Пн',
+                      '1789',
+                      '2386',
+                      '2982',
                   ]
               },
               {
-                  titleMain: 'Вес :',
-                  titleSubMain: 'Измерять в :',
-                  cardItem: [
-                      {
-                          inputId: 'kilo',
-                          inputName: 'weight',
-                          value: 'kilo',
-                          label: 'kilo',
-                          labelText: 'В киллограммах'
-                      },
-                      {
-                          inputId: 'lb',
-                          inputName: 'weight',
-                          value: 'lb',
-                          label: 'lb',
-                          labelText: 'В фунтах'
-                      }
+                  tableItem: [
+                      'Вторник',
+                      'Вт',
+                      '1585',
+                      '1909',
+                      '2386',
+                  ]
+              },
+              {
+                  tableItem: [
+                      'Среда',
+                      'Ср',
+                      '2147',
+                      '2863',
+                      '3578',
+                  ]
+              },
+              {
+                  tableItem: [
+                      'Четверг',
+                      'Чт',
+                      '2147',
+                      '2863',
+                      '3578',
+                  ]
+              },
+              {
+                  tableItem: [
+                      'Пятница',
+                      'Пт',
+                      '2147',
+                      '2863',
+                      '3578',
+                  ]
+              },
+              {
+                  tableItem: [
+                      'Суббота',
+                      'Сб',
+                      '2147',
+                      '2863',
+                      '3578',
+                  ]
+              },
+              {
+                  tableItem: [
+                      'Воскресенье',
+                      'Вс',
+                      '2147',
+                      '2863',
+                      '3578',
                   ]
               }
           ]
-        each cardItem in cardList
-          .form__card
-            fieldset.form__calculator
-              legend.form__calculator-title= cardItem.titleMain
-              input.form__calculator-item(type="text")
-            fieldset.form__calculator
-              legend.form__calculator-title= cardItem.titleSubMain
-              .form__calculator-inner
-                each formItem in cardItem.cardItem
-                  input.form__calculator-input(
-                    id=formItem.inputId,
-                    type="radio",
-                    name=formItem.inputName,
-                    value=formItem.value
-                  )
-                  label.form__calculator-label(for=formItem.label)= formItem.labelText
-        .form__card
-          fieldset.form__calculator.form__calculator--position
-            legend.form__calculator-title Рост :
-            input.form__calculator-item(type="text")
-            span.form__calculator-span см.
-          fieldset.form__calculator
-            legend.form__calculator-title Физическая активность
-            input.form__calculator-list.form__calculator-item(list="training")
-            datalist#training
-              -
-                let dataList = [
-                    'Не занимаюсь',
-                    '1 раз в неделю',
-                    '2 раза в неделю',
-                    '3 раза в неделю',
-                    '4 раза в неделю',
-                    '5 раз в неделю'
-                ]
-              each dataItem in dataList
-                option= dataItem
-        .form__card
-          -
-            let resultList = [
-                {
-                    resultTitle: 'Результат в :',
-                    resultItem: [
-                        {
-                            resultId: 'kilocalories',
-                            resultName: 'kilocalories',
-                            resultValue: 'weight',
-                            labelFor: 'kilocalories',
-                            labelText: 'Ккал'
-                        },
-                        {
-                            resultId: 'Kilojoules',
-                            resultName: 'Kilojoules',
-                            resultValue: 'weight',
-                            labelFor: 'Kilojoules',
-                            labelText: 'Килоджоулях'
-                        },
-            
-                    ]
-                },
-                {
-                    resultTitle: 'Физическая активность',
-                    resultItem: [
-                        {
-                            resultId: 'miffline',
-                            resultName: 'miffline',
-                            resultValue: 'weight',
-                            labelFor: 'miffline',
-                            labelText: 'Миффлина - Сан Жеора'
-                        },
-                        {
-                            resultId: 'harris',
-                            resultName: 'harris',
-                            resultValue: 'weight',
-                            labelFor: 'harris',
-                            labelText: 'Харриса-Бенедикта'
-                        },
-            
-                    ]
-                }
-            ]
-          each resultItem in resultList
-            fieldset.form__calculator.form__calculator--column
-              legend.form__calculator-title= resultItem.resultTitle
-
-              each formItems in resultItem.resultItem
-                .form__calculator-wrap
-                  input.form__calculator-input(
-                    id=formItems.resultId,
-                    type="radio",
-                    name=formItems.resultName,
-                    value=formItems.resultValue
-                  )
-                  label(for=formItems.labelFor)= formItems.labelText
-        input.form__button.button(type="submit", value="Вычислить")
-      .calculator__wrapper
-        table.calculator__table
-          tr
-            -
-              let titleList = [
-                  '',
-                  'Быстрая потеря веса',
-                  'Потеря веса',
-                  'Не изменяя вес'
-              ]
-            each titleItem in titleList
-              th.calculator__table-title= titleItem
-          -
-            let tableList = [
-                {
-                    tableItem: [
-                        'Понедельник',
-                        'Пн',
-                        '1789',
-                        '2386',
-                        '2982',
-                    ]
-                },
-                {
-                    tableItem: [
-                        'Вторник',
-                        'Вт',
-                        '1585',
-                        '1909',
-                        '2386',
-                    ]
-                },
-                {
-                    tableItem: [
-                        'Среда',
-                        'Ср',
-                        '2147',
-                        '2863',
-                        '3578',
-                    ]
-                },
-                {
-                    tableItem: [
-                        'Четверг',
-                        'Чт',
-                        '2147',
-                        '2863',
-                        '3578',
-                    ]
-                },
-                {
-                    tableItem: [
-                        'Пятница',
-                        'Пт',
-                        '2147',
-                        '2863',
-                        '3578',
-                    ]
-                },
-                {
-                    tableItem: [
-                        'Суббота',
-                        'Сб',
-                        '2147',
-                        '2863',
-                        '3578',
-                    ]
-                },
-                {
-                    tableItem: [
-                        'Воскресенье',
-                        'Вс',
-                        '2147',
-                        '2863',
-                        '3578',
-                    ]
-                }
-            ]
-          each tableItem in tableList
-            tr.calculator__table-list
-              each rowItem in tableItem.tableItem
-                td.calculator__table-item= rowItem
+        each tableItem in tableList
+          tr.calculator__table-list
+            each rowItem in tableItem.tableItem
+              td.calculator__table-item= rowItem

@@ -2,109 +2,7 @@
 	&__container {
 		display: flex;
 		}
-	.form {
-		width: 100%;
-		max-width: 470px;
-		margin-right: 3%;
-		&__text {
-			margin-bottom: 50px;
-			}
-		&__description{
-			color: #000;
 
-			line-height: 1.5;
-			}
-		&__card {
-			display: flex;
-			&:not(:last-child) {
-				margin-bottom: 30px;
-				}
-			}
-		&__calculator {
-			&:not(:last-child) {
-				margin-right: 30px;
-				}
-			&-title {
-				margin-bottom: 20px;
-
-				text-transform: uppercase;
-
-				color: #000;
-
-				font-weight: 700;
-				line-height: 1.5;
-				}
-			&-item {
-				width: 150px;
-				height: 40px;
-				padding: 0 10px 0 10px;
-
-				border: 1px solid #eaecf0;
-				border-radius: 20px;
-				}
-			&-inner {
-				display: flex;
-				align-items: center;
-
-				height: 40px;
-				}
-			&-input {
-				width: 15px;
-				height: 20px;
-				margin-right: 5px;
-
-				border: 1px solid #7a7c82;
-				border-radius: 50%;
-				background-color: #fff;
-				}
-			&-label {
-				&:not(:last-child) {
-					margin-right: 20px;
-					}
-				}
-			&-span {
-				position: absolute;
-				right: 10px;
-				bottom: 14px;
-				}
-			&--position {
-				position: relative;
-				}
-			&-list {
-				width: 100%;
-				padding: 0 10px 0 20px;
-				}
-			&--column {
-				display: flex;
-				flex-direction: column;
-				&:not(:first-child) {
-					margin-left: 42px;
-					}
-				}
-			&-wrap {
-				display: flex;
-				align-items: center;
-
-				height: 20px;
-				&:not(:last-child) {
-					margin-bottom: 15px;
-					}
-				}
-			}
-		&__button {
-			width: 100%;
-
-			color: $color-text-main;
-			background-color: $background-color-submain;
-
-			font-size: 18px;
-
-			&:hover {
-				color: $color-hover-submain;
-				background-color: $background-color-main;
-				}
-			}
-		}
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
@@ -155,12 +53,6 @@
 			align-items: center;
 			flex-direction: column;
 			}
-
-		.form {
-			width: 100%;
-			max-width: 615px;
-			margin-right: 0;
-			}
 		&__wrapper {
 			width: 100%;
 			max-width: 615px;
@@ -170,27 +62,6 @@
 	}
 
 @media (max-width: 460px) {
-	.form {
-		&__card {
-			flex-direction: column;
-			}
-		&__calculator {
-			&:not(:last-child) {
-				margin: 0 0 20px 0;
-				}
-			&-span {
-				left: 115px;
-				}
-			&-item {
-				max-width: 230px;
-				}
-			&--column {
-				&:not(:first-child) {
-					margin-left: 0;
-					}
-				}
-			}
-		}
 	.calculator {
 		&__table {
 			&-title,
