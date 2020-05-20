@@ -22,24 +22,5 @@
 		&:not(:first-child) {
 			text-align: center;
 			}
-		&:nth-child(2) {
-			display: none;
-			}
-		}
-	}
-@media (max-width: 460px) {
-	.table {
-		&__title,
-		&__item {
-			padding: 15px 10px;
-			}
-		&__item {
-			&:first-child {
-				display: none;
-				}
-			&:nth-child(2) {
-				display: block;
-				}
-			}
 		}
 	}
