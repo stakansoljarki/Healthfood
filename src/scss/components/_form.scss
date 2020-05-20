@@ -4,6 +4,8 @@
 		margin-bottom: 50px;
 		}
 	&__description{
+		margin-bottom: 20px;
+
 		color: $color-text-main;
 
 		line-height: 1.5;
@@ -15,6 +17,8 @@
 			}
 		}
 	&__fieldset {
+		display: flex;
+		flex-direction: column;
 		&--margin {
 			&:not(:last-child) {
 				margin-right: 30px;
