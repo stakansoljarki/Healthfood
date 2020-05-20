@@ -1,0 +1,69 @@
+.art {
+	&__container {
+		display: flex;
+		flex-direction: column;
+
+		max-width: 770px;
+		margin: 0 auto;
+		}
+	&__wrapper {
+		margin-bottom: 30px;
+		}
+	&__date,
+	&__author {
+		color: rgba(34, 36, 46, 0.8);
+		}
+	&__date {
+		margin-bottom: 15px;
+		}
+	&__author {
+		margin-left: 15px;
+		&:hover {
+			color: #f8d851;
+			}
+		}
+	&__title {
+		text-transform: uppercase;
+
+		color: #22242e;
+
+		font-size: 26px;
+		font-weight: bold;
+		}
+	&__image {
+		margin-bottom: 30px;
+		}
+	&__img {
+		width: 100%;
+		height: auto;
+		}
+	&__description {
+		margin-bottom: 20px;
+
+		color: #7a7c82;
+
+		font-size: 17px;
+		line-height: 24px;
+		}
+	&__socials {
+		display: flex;
+		}
+	&__share {
+		margin-right: 15px;
+
+		text-transform: uppercase;
+
+		color: #22242e;
+
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 32px;
+		}
+	&__link {
+		&:hover {
+			color: $color-text-submain;
+			border: 1px solid $color-hover-main;
+			background-color: $color-hover-main;
+			}
+		}
+	}
