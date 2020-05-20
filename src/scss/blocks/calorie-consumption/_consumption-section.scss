@@ -1,0 +1,26 @@
+.consumption {
+	&__title {
+		text-align: center;
+		}
+	&__form {
+		max-width: 420px;
+		margin: 0 auto;
+		padding: 30px;
+
+		box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+		}
+	&__fieldset {
+		margin-bottom: 20px;
+		}
+	&__input-text,
+	&__input-list {
+		width: 100%;
+		}
+	&__span {
+		&--position {
+			position: absolute;
+			right: 10px;
+			bottom: 14px;
+			}
+		}
+	}
