@@ -1,0 +1,41 @@
+section.consumption.section--padding
+  .container
+    ul.breadcrumbs__list
+      -
+        let newsBreadcrumbsList = [
+            {
+                href: 'index.html',
+                text: 'Главная'
+            },
+            {
+                href: 'calorie-consumption.html',
+                text: 'Калькулятор расхода калорий'
+            }
+        ]
+      each breadcrumbsItem in newsBreadcrumbsList
+        include ../../components/breadcrumbs
+    h1.title.consumption__title Калькулятор расхода калорий
+    form.form.consumption__form
+      fieldset.form__fieldset.consumption__fieldset
+        label.form__title Деятельность :
+        input.input-list.consumption__input-list(list="activity")
+        datalist#activity
+          -
+            let activityList = [
+                'Работа по дому',
+                'Работа по дому',
+                'Работа по дому',
+                'Работа по дому',
+                'Работа по дому'
+            ]
+          each activityItem in activityList
+            option= activityItem
+      fieldset.form__fieldset.consumption__fieldset.form__fieldset--position
+        label.form__title Продолжительность активности :
+        input.input-text.consumption__input-text(type="text")
+        span.consumption__span.consumption__span--position мин.
+      fieldset.form__fieldset.form__fieldset--position
+        label.form__title Ваш вес :
+        input.input-text.consumption__input-text(type="text")
+        span.consumption__span.consumption__span--position кг.
+      input.form__button.button(type="submit", value="Вычислить")
