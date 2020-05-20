@@ -1,7 +1,7 @@
-input.form__input(
+input.input-radio(
   id=formItem.inputId,
   type="radio",
   name=formItem.inputName,
   value=formItem.value
 )
-label.form__label(for=formItem.label)= formItem.labelText
+label.label(for=formItem.inputId)= formItem.labelText

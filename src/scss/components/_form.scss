@@ -1,12 +1,10 @@
 .form {
 	width: 100%;
-	max-width: 470px;
-	margin-right: 3%;
 	&__text-block {
 		margin-bottom: 50px;
 		}
 	&__description{
-		color: #000;
+		color: $color-text-main;
 
 		line-height: 1.5;
 		}
@@ -17,8 +15,10 @@
 			}
 		}
 	&__fieldset {
-		&:not(:last-child) {
-			margin-right: 30px;
+		&--margin {
+			&:not(:last-child) {
+				margin-right: 30px;
+				}
 			}
 		&--position {
 			position: relative;
@@ -41,14 +41,7 @@
 		font-weight: 700;
 		line-height: 1.5;
 		}
-	&__item {
-		width: 150px;
-		height: 40px;
-		padding: 0 10px 0 10px;
 
-		border: 1px solid #eaecf0;
-		border-radius: 20px;
-		}
 	&__inner {
 		display: flex;
 		align-items: center;
@@ -56,13 +49,11 @@
 		height: 40px;
 		}
 	&__span {
-		position: absolute;
-		right: 10px;
-		bottom: 14px;
-		}
-	&__list {
-		width: 100%;
-		padding: 0 10px 0 20px;
+		&--position {
+			position: absolute;
+			right: 10px;
+			bottom: 14px;
+			}
 		}
 	&__button {
 		width: 100%;
@@ -76,13 +67,6 @@
 			color: $color-hover-submain;
 			background-color: $background-color-main;
 			}
-		}
-	}
-@media (max-width: 1160px) {
-	.form {
-		width: 100%;
-		max-width: 615px;
-		margin-right: 0;
 		}
 	}
 @media (max-width: 460px) {
@@ -101,7 +85,9 @@
 				}
 			}
 		&__span {
-			left: 115px;
+			&--position {
+				right: 210px;
+				}
 			}
 		&__item {
 			max-width: 230px;

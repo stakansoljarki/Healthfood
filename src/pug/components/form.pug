@@ -12,14 +12,12 @@ form.form
                     inputId: 'male',
                     inputName: 'gender',
                     value: 'male',
-                    label: 'male',
                     labelText: 'Мужской'
                 },
                 {
                     inputId: 'female',
                     inputName: 'gender',
                     value: 'female',
-                    label: 'female',
                     labelText: 'Женский'
                 }
             ]
@@ -32,14 +30,12 @@ form.form
                     inputId: 'kilo',
                     inputName: 'weight',
                     value: 'kilo',
-                    label: 'kilo',
                     labelText: 'В киллограммах'
                 },
                 {
                     inputId: 'lb',
                     inputName: 'weight',
                     value: 'lb',
-                    label: 'lb',
                     labelText: 'В фунтах'
                 }
             ]
@@ -49,7 +45,7 @@ form.form
     .form__card.form__card--margin
       fieldset.form__fieldset
         legend.form__title= cardItem.titleMain
-        input.form__item(type="text")
+        input.input-text(type="text")
       fieldset.form__fieldset
         legend.form__title= cardItem.titleSubMain
         .form__inner
@@ -58,11 +54,11 @@ form.form
   .form__card.form__card--margin
     fieldset.form__fieldset.form__fieldset--position
       legend.form__title Рост :
-      input.form__item(type="text")
+      input.input-text(type="text")
       span.form__span см.
     fieldset.form__fieldset
       legend.form__title Физическая активность
-      input.form__list.form__item(list="training")
+      input.input-list(list="training")
       datalist#training
         -
           let dataList = [
@@ -85,14 +81,12 @@ form.form
                       inputId: 'kilocalories',
                       inputName: 'kilocalories',
                       value: 'weight',
-                      label: 'kilocalories',
                       labelText: 'Ккал'
                   },
                   {
                       inputId: 'Kilojoules',
                       inputName: 'Kilojoules',
                       value: 'weight',
-                      label: 'Kilojoules',
                       labelText: 'Килоджоулях'
                   },
       
@@ -105,14 +99,12 @@ form.form
                       inputId: 'miffline',
                       inputName: 'miffline',
                       value: 'weight',
-                      label: 'miffline',
                       labelText: 'Миффлина - Сан Жеора'
                   },
                   {
                       inputId: 'harris',
                       inputName: 'harris',
                       value: 'weight',
-                      label: 'harris',
                       labelText: 'Харриса-Бенедикта'
                   },
       

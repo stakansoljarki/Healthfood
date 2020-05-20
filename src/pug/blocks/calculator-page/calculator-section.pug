@@ -16,8 +16,127 @@ section.calculator.section--padding
         each breadcrumbsItem in newsBreadcrumbsList
           include ../../components/breadcrumbs
     .calculator__container
-      include ../../components/form
-      table.calculator__table
+      form.form.calculator__form
+        fieldset.form__text-block
+          legend.title Калькулятор для похудения
+          p.form__description Рекомендуем попробовать наш новый калькулятор для похудения, который поможет выполнить расчет ккал для снижения веса в зависимости от ряда условий.
+        -
+          let cardList = [
+              {
+                  titleMain: 'Возраст :',
+                  titleSubMain: 'Пол :',
+                  cardItem: [
+                      {
+                          inputId: 'male',
+                          inputName: 'gender',
+                          value: 'male',
+                          labelText: 'Мужской'
+                      },
+                      {
+                          inputId: 'female',
+                          inputName: 'gender',
+                          value: 'female',
+                          labelText: 'Женский'
+                      }
+                  ]
+              },
+              {
+                  titleMain: 'Вес :',
+                  titleSubMain: 'Измерять в :',
+                  cardItem: [
+                      {
+                          inputId: 'kilo',
+                          inputName: 'weight',
+                          value: 'kilo',
+                          labelText: 'В киллограммах'
+                      },
+                      {
+                          inputId: 'lb',
+                          inputName: 'weight',
+                          value: 'lb',
+                          labelText: 'В фунтах'
+                      }
+                  ]
+              }
+          ]
+        each cardItem in cardList
+          .form__card.form__card--margin
+            fieldset.form__fieldset.form__fieldset--margin
+              legend.form__title= cardItem.titleMain
+              input.input-text.calculator__input-text(type="text")
+            fieldset.form__fieldset.form__fieldset--margin
+              legend.form__title= cardItem.titleSubMain
+              .form__inner
+                each formItem in cardItem.cardItem
+                  include ../../components/form/input-radio
+        .form__card.form__card--margin
+          fieldset.form__fieldset.form__fieldset--margin.form__fieldset--position
+            legend.form__title Рост :
+            input.input-text.calculator__input-text(type="text")
+            span.form__span.form__span--position см.
+          fieldset.form__fieldset.form__fieldset--margin
+            legend.form__title Физическая активность
+            input.input-list.calculator__input-list(list="training")
+            datalist#training
+              -
+                let dataList = [
+                    'Не занимаюсь',
+                    '1 раз в неделю',
+                    '2 раза в неделю',
+                    '3 раза в неделю',
+                    '4 раза в неделю',
+                    '5 раз в неделю'
+                ]
+              each dataItem in dataList
+                option= dataItem
+        .form__card.form__card--margin
+          -
+            let resultList = [
+                {
+                    resultTitle: 'Результат в :',
+                    resultItem: [
+                        {
+                            inputId: 'kilocalories',
+                            inputName: 'kilocalories',
+                            value: 'weight',
+                            labelText: 'Ккал'
+                        },
+                        {
+                            inputId: 'Kilojoules',
+                            inputName: 'Kilojoules',
+                            value: 'weight',
+                            labelText: 'Килоджоулях'
+                        },
+            
+                    ]
+                },
+                {
+                    resultTitle: 'Физическая активность',
+                    resultItem: [
+                        {
+                            inputId: 'miffline',
+                            inputName: 'miffline',
+                            value: 'weight',
+                            labelText: 'Миффлина - Сан Жеора'
+                        },
+                        {
+                            inputId: 'harris',
+                            inputName: 'harris',
+                            value: 'weight',
+                            labelText: 'Харриса-Бенедикта'
+                        },
+            
+                    ]
+                }
+            ]
+          each resultItem in resultList
+            fieldset.form__fieldset.form__fieldset--margin.form__fieldset--column
+              legend.form__title= resultItem.resultTitle
+              each formItem in resultItem.resultItem
+                .form__inner
+                  include ../../components/form/input-radio
+        input.form__button.button(type="submit", value="Вычислить")
+      table.table.calculator__table
         tr
           -
             let titleList = [
@@ -27,7 +146,7 @@ section.calculator.section--padding
                 'Не изменяя вес'
             ]
           each titleItem in titleList
-            th.calculator__table-title= titleItem
+            th.table__title.calculator__table-title= titleItem
         -
           let tableList = [
               {
@@ -95,6 +214,6 @@ section.calculator.section--padding
               }
           ]
         each tableItem in tableList
-          tr.calculator__table-list
+          tr.table__list.calculator__table-list
             each rowItem in tableItem.tableItem
-              td.calculator__table-item= rowItem
+              td.table__item.calculator__table-item= rowItem

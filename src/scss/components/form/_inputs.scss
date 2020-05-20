@@ -1,0 +1,19 @@
+.input-radio {
+	height: 20px;
+	margin-right: 5px;
+	}
+
+.input-text,
+.input-list {
+	height: 40px;
+	padding: 0 10px 0 10px;
+
+	border: 1px solid #eaecf0;
+	border-radius: 20px;
+	}
+
+.label {
+	&:not(:last-child) {
+		margin-right: 20px;
+		}
+	}
