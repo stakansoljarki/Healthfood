@@ -1,0 +1,115 @@
+section.requirement.section--padding
+  .container
+    .breadcrumbs
+      ul.breadcrumbs__list
+        -
+          let newsBreadcrumbsList = [
+              {
+                  href: 'index.html',
+                  text: 'Главная'
+              },
+              {
+                  href: 'healthy-foods.html',
+                  text: 'Ваша потребность в калориях'
+              }
+          ]
+        each breadcrumbsItem in newsBreadcrumbsList
+          include ../../components/breadcrumbs
+    h1.title.requirement__title Калькулятор потребности калорий
+    .requirement__container
+      form.form.requirement__form
+        fieldset.form__fieldset
+          .form__card.form__card--margin
+            fieldset.form__fieldset.form__fieldset--margin
+              label.form__title Ваш возраст
+              input.input-list(list="age")
+              datalist#age
+                -
+                  let ageList = [
+                      'От 16 до 19',
+                      'От 20 до 25',
+                      'От 26 до 30'
+                  ]
+                each ageItem in ageList
+                  option= ageItem
+            fieldset.form__fieldset.form__fieldset--margin
+              label.form__title Ваш пол :
+              .form__inner
+                -
+                  let formList = [
+                      {
+                          inputId: 'male',
+                          inputName: 'gender',
+                          value: 'male',
+                          labelText: 'Мужской'
+                      },
+                      {
+                          inputId: 'female',
+                          inputName: 'gender',
+                          value: 'female',
+                          labelText: 'Женский'
+                      }
+                  ]
+                each formItem in formList
+                  include ../../components/form/input-radio
+          fieldset.form__fieldset
+            label.form__title Ваша физическая активность
+            input.input-list.requirement__input-list(list="training")
+            datalist#training
+              -
+                let trainingList = [
+                    'Незначительная физическая активность',
+                    'Минимальная физическая активность',
+                    'Средняя физическая активность',
+                    'Высокая физическая активность',
+                    'Очень высокая физическая активность'
+                ]
+              each trainingItem in trainingList
+                option= trainingItem
+          input.form__button.button(type="submit", value="Вычислить")
+      table.table.requirement__table
+        tr
+          -
+            let titleList = [
+                'Рекомендуемое суточное количество',
+                ''
+            ]
+          each titleItem in titleList
+            th.table__title.requirement__table-title= titleItem
+        -
+          let tableList = [
+              {
+                  tableItem: [
+                      'Калории, ккал',
+                      '2800',
+                  ]
+              },
+              {
+                  tableItem: [
+                      'Белки, г',
+                      '80',
+                  ]
+              },
+              {
+                  tableItem: [
+                      'Животные белки, г',
+                      '44',
+                  ]
+              },
+              {
+                  tableItem: [
+                      'Жиры, г',
+                      '93',
+                  ]
+              },
+              {
+                  tableItem: [
+                      'Углеводы, г',
+                      '411',
+                  ]
+              }
+          ]
+        each tableItem in tableList
+          tr.table__list
+            each rowItem in tableItem.tableItem
+              td.table__item.requirement__table-item= rowItem
