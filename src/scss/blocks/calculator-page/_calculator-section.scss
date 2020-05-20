@@ -1,0 +1,41 @@
+.calculator {
+	&__container {
+		display: flex;
+		}
+
+	&__form {
+		max-width: 470px;
+		margin-right: 3%;
+		}
+	&__input-text {
+		width: 100%;
+		max-width: 150px;
+		}
+	&__input-list {
+		width: 100%;
+		}
+	}
+@media (max-width: 1160px) {
+	.calculator {
+		&__container {
+			align-items: center;
+			flex-direction: column;
+			}
+		&__form {
+			max-width: 615px;
+			margin-right: 0;
+			}
+		&__table {
+			max-width: 615px;
+			margin-top: 30px;
+			}
+		}
+	}
+@media (max-width: 460px) {
+	.calculator {
+		&__input-text,
+		&__input-list {
+			max-width: 230px;
+			}
+		}
+	}

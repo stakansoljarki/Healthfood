@@ -1,0 +1,45 @@
+.table {
+	width: 100%;
+
+	box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+	&__title,
+	&__item {
+		padding: 15px 10px 15px 30px;
+		}
+	&__title {
+		color: $color-text-submain;
+		background-color: $background-color-main;
+		}
+	&__list {
+		&:nth-child(even) {
+			background-color: #f2f2f2;
+			}
+		&:hover {
+			background-color: #ddd;
+			}
+		}
+	&__item {
+		&:not(:first-child) {
+			text-align: center;
+			}
+		&:nth-child(2) {
+			display: none;
+			}
+		}
+	}
+@media (max-width: 460px) {
+	.table {
+		&__title,
+		&__item {
+			padding: 15px 10px;
+			}
+		&__item {
+			&:first-child {
+				display: none;
+				}
+			&:nth-child(2) {
+				display: block;
+				}
+			}
+		}
+	}

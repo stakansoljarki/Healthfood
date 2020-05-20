@@ -20,6 +20,9 @@
 @import "components/sidebar";
 @import "components/breadcrumbs";
 @import "components/banner";
+@import "components/form";
+@import "components/form/inputs";
+@import "components/table";
 
 // layout
 @import "layout/header";
@@ -49,3 +52,6 @@
 
 // video-page
 @import "blocks/video-page/video-section";
+
+// calculator-page
+@import "blocks/calculator-page/calculator-section";
