@@ -3,7 +3,7 @@ section.author.section--padding
     .breadcrumbs
       ul.breadcrumbs__list
         -
-          let authorBreadcrumbsList = [
+          let breadcrumbsList = [
               {
                   href: 'index.html',
                   text: 'Главная'
@@ -13,7 +13,7 @@ section.author.section--padding
                   text: 'Евгений Третяк'
               }
           ]
-        each breadcrumbsItem in authorBreadcrumbsList
+        each breadcrumbsItem in breadcrumbsList
           include ../../components/breadcrumbs
     .grid-container
       .author__content

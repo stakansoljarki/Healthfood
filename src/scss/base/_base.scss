@@ -8,3 +8,12 @@ body {
 	font-size: 14px;
 	font-weight: 400;
 	}
+button,
+input[type=text],
+input[type=submit],
+input[type=list] {
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 3px #66aa52;
+		}
+	}
