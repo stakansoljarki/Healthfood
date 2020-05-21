@@ -11,28 +11,33 @@ header.header
         let socialHeaderList = [
             {
                 href: 'https://www.facebook.com/',
-                icon: './img/social-icons/facebook.svg'
+                icon: './img/social-icons/facebook.svg',
+                alt: 'facebook'
             },
             {
                 href: 'https://www.instagram.com/',
-                icon: './img/social-icons/instagram.svg'
+                icon: './img/social-icons/instagram.svg',
+                alt: 'instagram'
             },
             {
                 href: 'https://www.twitter.com/',
-                icon: './img/social-icons/twitter.svg'
+                icon: './img/social-icons/twitter.svg',
+                alt: 'twitter'
             },
             {
                 href: 'https://web.telegram.org/',
-                icon: './img/social-icons/telegram.svg'
+                icon: './img/social-icons/telegram.svg',
+                alt: 'telegram'
             },
             {
                 href: 'https://www.vk.com/',
-                icon: './img/social-icons/vk.svg'
+                icon: './img/social-icons/vk.svg',
+                alt: 'vk'
             }
         ]
       each socialHeaderItem in socialHeaderList
         a.social__link.social__link--header-hover(href=socialHeaderItem.href)
-          img(src=socialHeaderItem.icon)
+          img(src=socialHeaderItem.icon, alt=socialHeaderItem.alt)
     .header__menu
       -
         let menuList = [
