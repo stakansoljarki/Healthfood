@@ -3,7 +3,7 @@ section.art.section--padding
     .breadcrumbs
       ul.breadcrumbs__list
         -
-          let newsBreadcrumbsList = [
+          let breadcrumbsList = [
               {
                   href: 'index.html',
                   text: 'Главная'
@@ -17,7 +17,7 @@ section.art.section--padding
                   text: 'Действительно ли мясо настолько вредно?'
               }
           ]
-        each breadcrumbsItem in newsBreadcrumbsList
+        each breadcrumbsItem in breadcrumbsList
           include ../../components/breadcrumbs
     .art__container
       .art__wrapper

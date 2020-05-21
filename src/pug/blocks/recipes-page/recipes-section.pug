@@ -3,7 +3,7 @@ section.recipes.section--padding
     .breadcrumbs
       ul.breadcrumbs__list
         -
-          let newsBreadcrumbsList = [
+          let breadcrumbsList = [
               {
                   href: 'index.html',
                   text: 'Главная'
@@ -13,7 +13,7 @@ section.recipes.section--padding
                   text: 'Рецепты здоровых блюд'
               }
           ]
-        each breadcrumbsItem in newsBreadcrumbsList
+        each breadcrumbsItem in breadcrumbsList
           include ../../components/breadcrumbs
     .grid-container
       .news__content
